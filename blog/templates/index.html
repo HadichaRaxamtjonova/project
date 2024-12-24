@@ -63,6 +63,7 @@
         {% endfor %}
         <div class="col-lg-4">
           <div class="categories">
+            {% for meeting in meetings %}
             <h4>{{ meeting.title }}</h4>
             <ul>
               <li><a href="#">Sed tempus enim leo</a></li>
@@ -74,6 +75,7 @@
             <div class="main-button-red">
               <a href="meetings.html">{{ meeting.invitation }}</a>
             </div>
+            {% endfor %}
           </div>
         </div>
         <div class="col-lg-8">
@@ -133,7 +135,7 @@
                 </div>
                 <div class="accordion-body">
                     <div class="content">
-                        <p>{{ about.text }}</p>
+                        <p>{{ ab.text }}</p>
                     </div>
                 </div>
             </article>
@@ -158,7 +160,7 @@
               {% for pop in popular %}
               <img src="{{ pop.photo.url }}" alt="Course One">
               <div class="down-content">
-                <h4>{{ pop.title }}</h4>
+                <h4>{{ pop.text }}</h4>
                 <div class="info">
                   <div class="row">
                     <div class="col-8">

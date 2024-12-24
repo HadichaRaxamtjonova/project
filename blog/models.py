@@ -92,7 +92,7 @@ class Banner(models.Model):
 
 class Carousel(models.Model):
     title = models.CharField(max_length=15)
-    text = models.CharField(max_length=20)
+    text = models.CharField(max_length=100)
 
     def __str__(self):
         return self.title
@@ -100,14 +100,14 @@ class Carousel(models.Model):
 
 
 class Meeting(models.Model):
-    title = models.CharField(max_length=30)
-    invitation = models.CharField(max_length=20)
+    title = models.CharField(max_length=50)
+    invitation = models.CharField(max_length=50)
     price = models.CharField(max_length=20)
     month = models.CharField(max_length=15)
     day = models.CharField(max_length=5)
-    division = models.CharField(max_length=20)
-    first_text = models.CharField(max_length=30)
-    second_text = models.CharField(max_length=30)
+    division = models.CharField(max_length=50)
+    first_text = models.CharField(max_length=100)
+    second_text = models.CharField(max_length=100)
     photo = models.ImageField(upload_to='meeting_photos/', blank=True, null=True)
 
     def __str__(self):
@@ -127,9 +127,9 @@ class MeetingCategory(models.Model):
         return self.title
 
 class Middle(models.Model):
-    title = models.CharField(max_length=30)
-    text = models.CharField(max_length=30)
-    last = models.CharField(max_length=20)
+    title = models.CharField(max_length=100)
+    text = models.CharField(max_length=200)
+    last = models.CharField(max_length=50)
 
     def __str__(self):
         return self.title
@@ -137,16 +137,17 @@ class Middle(models.Model):
 
 
 class About(models.Model):
-    title = models.CharField(max_length=50)
-    text = models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    text = models.CharField(max_length=200)
 
     def __str__(self):
         return self.title
 
 
 class Popular(models.Model):
-    title = models.CharField(max_length=30)
-    price = models.DecimalField(max_digits=10, decimal_places=2)
+    title = models.CharField(max_length=50)
+    text = models.CharField(max_length=100)
+    price = models.CharField(max_length=20)
     photo = models.ImageField(upload_to='popular_photos/', blank=True, null=True)
 
     def __str__(self):
@@ -178,8 +179,9 @@ class Touch(models.Model):
 
 
 class End(models.Model):
-    title = models.CharField(max_length=50)
+    title = models.CharField(max_length=100)
     text = models.CharField(max_length=100)
+    is_active = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title

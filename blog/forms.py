@@ -166,7 +166,7 @@ class MiddleForm(forms.ModelForm):
 class PopularForm(forms.ModelForm):
     class Meta:
         model = Popular
-        fields = ['title', 'price', 'photo']
+        fields = ['title', 'text', 'price', 'photo']
 
 
 class FactForm(forms.ModelForm):
@@ -185,7 +185,7 @@ class TouchForm(forms.ModelForm):
 class EndForm(forms.ModelForm):
     class Meta:
         model = End
-        fields = ['title', 'text']
+        fields = ['title', 'text', 'is_active']
 
 
 class MiddleFirstForm(forms.ModelForm):

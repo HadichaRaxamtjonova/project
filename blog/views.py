@@ -44,8 +44,8 @@ def admin_logout(request):
 
 @login_required(login_url='/admin/')
 def admin_list(request):
-    users = CustomUser.objects.filter(is_staff=True)
-    return render(request, 'admin/admin_list.html', {'users': users})
+    user = CustomUser.objects.filter(is_staff=True)
+    return render(request, 'admin/admin_list.html', {'user': user})
 
 
 @login_required(login_url='/admin/')
@@ -135,7 +135,7 @@ def home_view(request):
     popular = Popular.objects.all()
     facts = Fact.objects.all()
     touch = Touch.objects.all()
-    end = End.objects.all()
+    end = End.objects.filter(is_active=True)
     menu = Menu.objects.all()
     meetingheader = MeetingHeader.objects.all()
     admins = CustomUser.objects.all()

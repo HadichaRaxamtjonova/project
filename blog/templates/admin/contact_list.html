@@ -14,10 +14,6 @@
                 <tr>
                     <th><i class="fas fa-hashtag"></i> ID</th>
                     <th><i class="fas fa-heading"></i> Title</th>
-                    <th><i class="fas fa-phone"></i> First Contact</th>
-                    <th><i class="fas fa-phone"></i> Second Contact</th>
-                    <th><i class="fas fa-phone"></i> Third Contact</th>
-                    <th><i class="fas fa-phone"></i> Fourth Contact</th>
                     <th><i class="fas fa-info-circle"></i> Last</th>
                     <th class="text-center"><i class="fas fa-cogs"></i> Actions</th>
                 </tr>
@@ -27,10 +23,6 @@
                 <tr>
                     <td>{{ contact.id }}</td>
                     <td>{{ contact.title }}</td>
-                    <td>{{ contact.first_contact }}</td>
-                    <td>{{ contact.second_contact }}</td>
-                    <td>{{ contact.third_contact }}</td>
-                    <td>{{ contact.fourth_contact }}</td>
                     <td>{{ contact.last }}</td>
                     <td class="text-center">
                         <a href="{% url 'contact_update' contact.pk %}" class="btn btn-sm btn-outline-info" title="Edit">

@@ -14,6 +14,7 @@
                 <tr>
                     <th><i class="fas fa-hashtag"></i> ID</th>
                     <th><i class="fas fa-text-width"></i> Title</th>
+                    <th><i class="fas fa-text-width"></i> Text</th>
                     <th><i class="fas fa-dollar-sign"></i> Price</th>
                     <th><i class="fas fa-dollar-sign"></i> Photo</th>
                     <th class="text-center"><i class="fas fa-cogs"></i> Actions</th>
@@ -24,6 +25,7 @@
                     <tr>
                         <td>{{ pop.id }}</td>
                         <td>{{ pop.title }}</td>
+                        <td>{{ pop.text }}</td>
                         <td>{{ pop.price }}</td>
                         <td>
                             <a href="{{ pop.photo.url }}" target="_blank">

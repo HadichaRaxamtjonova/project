@@ -1,7 +1,9 @@
 {% load static %}
 <div class="footer">
-      <p>Copyright © 2024 SyntaxLab. All Rights Reserved.
-          <br>Design: <a href="https://syntaxlab.com" target="_parent" title="free css templates">SyntaxLab</a></p>
+    {% for e in end %}
+      <p>{{ e.title }}
+          <br>{{ e.text }}</p>
+    {% endfor %}
     </div>
 <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
